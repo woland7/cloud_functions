@@ -1,0 +1,11 @@
+ENABLE:
+  - GO
+DISABLE_ERRORS: true
+SARIF_REPORTER: true
+GO_GOLANGCI_LINT_ARGUMENTS: "--out-format checkstyle:report.xml"
+PRE_COMMANDS:
+  - command: pwd
+    cwd: "workspace"   # Will be run at the root of the work
+POST_COMMANDS:
+  - command: ls
+    cwd: "workspace"   # Will be run at the root of the work
